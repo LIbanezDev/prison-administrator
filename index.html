@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f0c1ebd83a.js" crossorigin="anonymous"></script>
+    <title>Registro de reos</title>
+    <style>
+        body {
+            font-family: Inter, serif;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="row">
+        <a class="col-12 text-center"  href="./" >
+            <img src="./img/logo.svg" alt="PDI" width="300" height="150" class="d-inline-block align-text-top">
+        </a>
+        <div class="col text-center">
+            <h1> Administracion de Reos </h1>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <div class="row">
+        <div class="col-12 col-lg-5 mb-2">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h3>
+                        Inscripcion de reos
+                    </h3>
+                </div>
+                <form id="form-agregar-reo">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="nombre-reo" class="form-label"> Nombre </label>
+                            <input class="form-control" id="nombre-reo"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellido-reo" class="form-label"> Apellido </label>
+                            <input class="form-control" id="apellido-reo"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="crimenes-reo" class="form-label"> Cantidad de crimenes </label>
+                            <input class="form-control" type="number" id="crimenes-reo"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion-reo" class="form-label"> Descripcion </label>
+                            <textarea id="descripcion-reo"></textarea>
+                        </div>
+                        <label for="ciudad-reo" class="form-label"> Ciudad </label>
+                        <select class="form-select" aria-label="Ciudad de reo" id="ciudad-reo">
+                        </select>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col mt-2">
+                                <button type="submit" class="btn btn-success">Agregar reo</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="bg-primary text-white">
+                <tr>
+                    <th class="col"> Nombre y Apellido</th>
+                    <th class="col"> Detalles</th>
+                    <th class="col"> Ciudad</th>
+                    <th class="col text-center"> Gravedad</th>
+                </tr>
+                </thead>
+                <tbody id="container-reos">
+                </tbody>
+            </table>
+        </div>
+</main>
+<footer>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="vendor/tinymce/tinymce.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
